@@ -23,7 +23,7 @@ resource "aws_iam_policy" "eks_describe_cluster" {
         Action = [
           "eks:DescribeCluster"
         ]
-        Resource = "arn:aws:eks:eu-west-1:${var.account_id}:cluster/${var.cluster_name}"
+        Resource = "arn:aws:eks:${var.region}:${var.account_id}:cluster/${var.cluster_name}"
       }
     ]
   })
